@@ -16,9 +16,15 @@ if (-not (Test-Path $uv)) {
     New-Item -ItemType Directory -Force $uvDir | Out-Null
     $zip = Join-Path $uvDir 'uv.zip'
     Invoke-WebRequest "https://github.com/astral-sh/uv/releases/download/$UV_VERSION/uv-x86_64-pc-windows-msvc.zip" -OutFile $zip
-    $hash = (Get-FileHash $zip -Algorithm SHA256).Hash
+    # .NET directly (not Get-FileHash / Expand-Archive): those live in modules
+    # that don't always load, e.g. when started from a PowerShell 7 session
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    $fs = [System.IO.File]::OpenRead($zip)
+    $hash = -join ($sha.ComputeHash($fs) | ForEach-Object { $_.ToString('X2') })
+    $fs.Close()
     if ($hash -ne $UV_SHA256) { Remove-Item $zip; throw "uv download checksum mismatch ($hash)" }
-    Expand-Archive $zip $uvDir -Force
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zip, $uvDir)
     Remove-Item $zip
 }
 
