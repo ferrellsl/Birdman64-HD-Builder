@@ -1,0 +1,5 @@
+Put your own Pilotwings 64 ROM in this folder (.z64, .n64, .v64, or a .zip
+containing one), then double-click build.bat in the folder above.
+
+The US version is the one Birdman64 supports. No ROM is included with this
+project and none is ever uploaded anywhere: it is only read on your PC.

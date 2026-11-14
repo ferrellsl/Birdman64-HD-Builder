@@ -1,0 +1,10 @@
+# your ROM never goes in the repo
+rom/*
+!rom/PUT-YOUR-ROM-HERE.txt
+# downloaded at build time
+tools/*
+!tools/bootstrap.ps1
+# build output
+work/
+output/
+__pycache__/

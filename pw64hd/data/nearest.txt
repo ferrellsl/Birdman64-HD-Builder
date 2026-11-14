@@ -1,0 +1,25 @@
+# Textures scaled with nearest-neighbour instead of Real-ESRGAN (HUD lettering).
+21c8053a79ddd36a  # PHOTO
+86ccf29c44bdf2ce  # FUEL
+a11441a69bb410b0  # SPEED
+a7a93fba5a5ba57b  # SEA LEVEL
+e2b4272b5745931d  # TIME
+# Font sheets and digit strips (added after the full sweep)
+2fb9adefdbb8c283  # alphabet V-z
+394c774685aff33a  # alphabet c-z + punctuation
+8f685b3487365e4d  # 0-9 A-Z menu font
+a17cbc0be15e1fd3  # punctuation + digits
+1389d26191ee546c  # big red digits (altitude tag)
+412e9dd2d285bee3  # digits + m
+9816866a7dfeae21  # 0-9 km/h
+5b2a531a02b35ad8  # digit strip
+57f969dbcfda8320  # digit strip
+58f267ee76fd269f  # digit fragment
+684eaf573fd6b4cd  # 2P-0138 plate
+917309b40d28a940  # TEST
+2133aa3c9838022f  # Photos left :
+1d2b6467f720b02b  # HOLLYWOOD sign text
+36bf3fe1ebc9d443  # (c)1996 Nintendo / Paradigm
+1ce2fae92e158050  # small 2
+40bdb88f69cb76f4  # small digits
+424b6e2404d97812  # small digits
